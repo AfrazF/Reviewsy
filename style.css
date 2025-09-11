@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    background-color: hsl(185, 100%, 95%);
+}
+
+p {
+    margin-bottom: 100px;
+}
+
+.navBar{
+    background-color: hsl(300, 20%, 65%);
+    display: block;
+    height: 50px;
+    position: sticky;
+}
+
+.navBar ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navBar li{
+    float: left;
+}
+
+.navBar a{
+    color: white;
+    text-decoration: none;
+}
+
+#profilePic{
+    float: right;
+}
+#profilePic img{
+    border-radius: 100%;
+}
+
+#search {
+    margin: auto;
+}
+
+.logo {
+    float: left;
+}
