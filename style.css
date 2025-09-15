@@ -1,28 +1,30 @@
+:root {
+    --bg-color: hsl(185, 100%, 95%);
+    --accent-color-1: hsl(180, 100%, 80%);
+    --accent-color-2: hsl(300, 100%, 80%);
+
+}
+
 body {
     margin: 0;
-    background-color: hsl(185, 100%, 95%);
+    background-color: var(--bg-color);
 }
 
 p {
+    font-size: large;
     margin-bottom: 100px;
 }
 
 .navBar{
-    background-color: hsl(300, 20%, 65%);
-    display: block;
+    background-color: hsl(300, 45%, 65%);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     height: 50px;
     position: sticky;
-}
-
-.navBar ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    overflow: hidden;
-}
-
-.navBar li{
-    float: left;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px;
 }
 
 .navBar a{
@@ -30,17 +32,68 @@ p {
     text-decoration: none;
 }
 
-#profilePic{
-    float: right;
+.navBar .logo{
+    justify-self: start;
 }
+
+.navBar .search{
+    justify-self: center;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search form{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 40px;
+    padding: 0 0 0 0;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.25);
+    height: 40px;
+}
+
+#search{
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 40px 0 0 40px;
+    background: transparent;
+    max-width: 400px;
+    height: 100%;
+    width: 100%;
+
+}
+
+#search_btn {
+    background-color: hsl(300, 100%, 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    width: 60px;
+    height: 100%;
+    border-radius: 0 40px 40px 0;
+    transition: background 0.2s ease;
+}
+
+#search_btn:hover {
+    background: hsl(300, 100%, 45%);
+}
+
+#profilePic {
+    justify-self: end;
+}
+
 #profilePic img{
     border-radius: 100%;
-}
-
-#search {
-    margin: auto;
-}
-
-.logo {
-    float: left;
 }
