@@ -128,3 +128,55 @@ main {
     display: block;
     margin-left: 10px;
 }
+
+footer {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "links info info_map"
+    "copyright copyright copyright";
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    grid-area: footer;
+    background-color: hsl(300, 45%, 65%);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    margin-top: 10px;
+    max-height: 100px;
+}
+
+footer .footer_links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    gap: 10px;
+    border-right: 5px solid turquoise;
+}
+
+footer .footer_links a{
+    color: turquoise;
+    display: block;
+    flex-wrap: wrap;
+}
+
+footer .footer_info {
+    grid-area: info;
+    min-width: 200px;
+}
+
+footer iframe {
+    grid-area: info_map;
+    border: 0;
+    max-width: 100px;
+    height: 100px;
+
+}
+
+footer .copyright {
+  grid-area: copyright;
+  text-align: center;
+  font-size: 0.9em;
+}
