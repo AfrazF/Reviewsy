@@ -18,7 +18,7 @@
         </div>
 
         <div class="search">
-            <form>
+            <form onsubmit= 'alert("Not working")'>
                 <input title="search" type="search" id="search" placeholder="Search...">
                 <button type="submit" id="search_btn">
                     <span class="material-symbols-outlined">search</span>
@@ -27,14 +27,14 @@
         </div>
 
         <div id="profilePic">
-            <button id="profilePic_toggle" type="button" height="50px">
+            <button id="profilePic_toggle" type="button" height="50px" onclick='alert("Not working")'>
                 <img src="images/default_user.png" alt="Profile Picture" height="50px">
             </button>
         </div>            
     </nav>
 
     <aside class="sideBar" id="sideBar">
-        <button type="button" id="sideBar_toggle" class="sideBar_toggle" aria-expanded="false" aria-label="Open Sidebar">
+        <button type="button" id="sideBar_toggle" class="sideBar_toggle" aria-expanded="false" aria-label="Open Sidebar" onclick='alert("Not working")'>
             <span class="material-symbols-outlined">menu</span>
         </button>
     </aside>
@@ -60,7 +60,7 @@
             <a href="#">Contact Us</a>
         </div>
         <div class="footer_info">
-            <h5>Business Information:</h5>
+            <h3>Business Information:</h5>
             <p>Email: <a href="mailto:Reviewsy_support@bogus.com">Reviewsy_support@bogus.com</a></p>
             <p>Phone Number: <a title="Number" href="tel:+9715523729">05523729</a></p>
             <p>Our Location:</p>
