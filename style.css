@@ -135,7 +135,7 @@ footer {
     grid-template-areas:
     "links info"
     "copyright copyright";
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     grid-area: footer;
     background-color: hsl(300, 45%, 65%);
@@ -148,13 +148,15 @@ footer {
 }
 
 footer .footer_links {
+    background-color: var(--accent-color-2);
     grid-area: links;
     display: flex;
     flex-direction: column;
     width: 200px;
     gap: 10px;
     border-right: 5px solid turquoise;
-    max-height: 50px;
+    height: 100%;
+    max-height: none;
 }
 
 footer .footer_links a{
@@ -187,15 +189,23 @@ footer iframe {
 
 footer .copyright {
   grid-area: copyright;
-  justify-self: center;
+  justify-self: stretch;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
   display: flex;
   flex-direction: row;
   text-align: center;
   font-size: 0.9em;
   max-height: 50px;
+  background-color: hsl(300, 45%, 55%);
 }
 
 .copyright p {
-    margin-right: 10px;
+    margin: 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
