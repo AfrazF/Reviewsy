@@ -209,3 +209,30 @@ footer .copyright {
     align-items: center;
     text-align: center;
 }
+
+.gradient_about {
+  background: repeating-linear-gradient(
+    90deg,
+    #98fbff 0%,
+    #f5a2ff 20%,
+    #98fbff 40%,
+    #f5a2ff 60%,
+    #98fbff 80%,
+    #f5a2ff 100%
+  );
+  background-size: 4000px 100%;
+  background-repeat: repeat;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: scrollGradient 2s linear infinite;
+}
+
+@keyframes scrollGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
