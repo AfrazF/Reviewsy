@@ -296,3 +296,217 @@ footer .copyright {
   transform: scale(1.05);
   filter: drop-shadow(0 0 40px rgba(152, 251, 255, 0.8));
 }
+
+.contact-main {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  gap: 3rem;
+  background: linear-gradient(
+    135deg,
+    var(--bg-color) 0%,
+    hsl(185, 100%, 97%) 40%,
+    hsl(300, 100%, 97%) 100%
+  );
+}
+
+.contact-intro {
+  text-align: center;
+  max-width: 700px;
+}
+
+.contact-intro p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  flex: 1 1 400px;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent-color-1) 40%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form button {
+  align-self: flex-end;
+  background: var(--accent-color-2);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: hsl(300, 100%, 45%);
+}
+
+.contact-info-box {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent-color-2) 40%, transparent);
+}
+
+.contact-info-box h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.contact-info-box a {
+  color: var(--accent-color-2);
+  text-decoration: none;
+}
+
+/* ===== SIDEBAR STYLES ===== */
+.sideBar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 70px;
+  background: hsl(300, 45%, 45%); /* solid purple tone */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  gap: 1rem;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+/* Expanded state */
+.sideBar.open {
+  width: 200px;
+}
+
+/* Toggle (menu) button */
+.sideBar_toggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sideBar_toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation links container */
+.sideBar_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Individual link */
+.sideBar_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sideBar_link:hover {
+  background: hsl(300, 45%, 55%);
+  color: #00ffe5; /* aqua hover text color */
+}
+
+/* Icon */
+.sideBar_link .material-symbols-outlined {
+  font-size: 28px;
+  transition: margin-right 0.3s ease;
+}
+
+/* Text hidden by default */
+.link_text {
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  margin-left: 0;
+  color: white;
+  transition: opacity 0.3s ease, margin-left 0.3s ease, color 0.3s ease;
+}
+
+/* Show text when expanded */
+.sideBar.open .link_text {
+  opacity: 1;
+  visibility: visible;
+  margin-left: 10px;
+}
+
+/* Change text color when hovering */
+.sideBar_link:hover .link_text {
+  color: #00ffe5;
+}
+
+/* Align icons and text when expanded */
+.sideBar.open .sideBar_link {
+  justify-content: flex-start;
+  padding-left: 1.2rem;
+}
+
+.sideBar.open .sideBar_link .material-symbols-outlined {
+  margin-right: 10px;
+}
+
+/* Auto-expand on large screens */
+@media (min-width: 1200px) {
+  .sideBar {
+    width: 200px;
+  }
+  .sideBar .link_text {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 10px;
+  }
+  .sideBar .sideBar_link {
+    justify-content: flex-start;
+    padding-left: 1.2rem;
+  }
+  .sideBar .sideBar_link .material-symbols-outlined {
+    margin-right: 10px;
+  }
+}

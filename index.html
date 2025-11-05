@@ -1,79 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="style.css">
-    <title>Reviewsy</title>
-</head>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="style.css">
+        <title>Reviewsy</title>
+    </head>
 
-<body>
-    <nav class="navBar">
-        <div class="logo">
-            <a href="index.html"><img src="images/Reviewsy_logo.png" alt="Logo (Goes to home page)" height="50px"></a>
-        </div>
+    <body>
+        <nav class="navBar">
+            <div class="logo">
+                <a href="index.html"><img src="images/Reviewsy_logo.png" alt="Logo (Goes to home page)" height="50px"></a>
+            </div>
 
-        <div class="search">
-            <form onsubmit= 'alert("Not working")'>
-                <input title="search" type="search" id="search" placeholder="Search...">
-                <button type="submit" id="search_btn">
-                    <span class="material-symbols-outlined">search</span>
+            <div class="search">
+                <form onsubmit= 'alert("Not working")'>
+                    <input title="search" type="search" id="search" placeholder="Search...">
+                    <button type="submit" id="search_btn">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </form>
+            </div>
+
+            <div id="profilePic">
+                <button id="profilePic_toggle" type="button" height="50px" onclick='alert("Not working")'>
+                    <img src="images/default_user.png" alt="Profile Picture" height="50px">
                 </button>
-            </form>
-        </div>
+            </div>            
+        </nav>
 
-        <div id="profilePic">
-            <button id="profilePic_toggle" type="button" height="50px" onclick='alert("Not working")'>
-                <img src="images/default_user.png" alt="Profile Picture" height="50px">
+        <aside class="sideBar" id="sideBar">
+            <button
+                type="button"
+                id="sideBar_toggle"
+                class="sideBar_toggle"
+                aria-expanded="false"
+                aria-label="Toggle Sidebar"
+            >
+                <span class="material-symbols-outlined">menu</span>
             </button>
-        </div>            
-    </nav>
 
-    <aside class="sideBar" id="sideBar">
-        <button type="button" id="sideBar_toggle" class="sideBar_toggle" aria-expanded="false" aria-label="Open Sidebar" onclick='alert("Not working")'>
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-    </aside>
+            <nav class="sideBar_nav">
+                <a href="index.html" class="sideBar_link" title="Home">
+                <span class="material-symbols-outlined">home</span>
+                <span class="link_text">Home</span>
+                </a>
 
-    <main>
+                <a href="about-us.html" class="sideBar_link" title="About Us">
+                <span class="material-symbols-outlined">info</span>
+                <span class="link_text">About</span>
+                </a>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-    </main>
+                <a href="contact-us.html" class="sideBar_link" title="Contact Us">
+                <span class="material-symbols-outlined">contact_support</span>
+                <span class="link_text">Contact</span>
+                </a>
+            </nav>
+        </aside>
 
-    <footer>
-        <div class="footer_links">
-            <a href="#">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="#">Contact Us</a>
-        </div>
-        <div class="footer_info">
-            <h3>Business Information:</h5>
-            <p>Email: <a href="mailto:Reviewsy_support@bogus.com">Reviewsy_support@bogus.com</a></p>
-            <p>Phone Number: <a title="Number" href="tel:+9715523729">05523729</a></p>
-        </div>
-<!--
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28885.77412863348!2d55.23485251083986!3d25.178871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6834c73541e9%3A0x7cd1b295e179fce7!2sDAMAC%20Park%20Central!5e0!3m2!1sen!2sae!4v1758644266338!5m2!1sen!2sae" width="600" height="450" style="border:0;"
-         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    -->
-        <div class="copyright">
-            <p>Reviewsy &copy; 2025</p>
-            <p>All Rights Reserved ONLY FOR AFRAZ (NO COPYING).</p>
-        </div>
 
-        </footer>
-</body>
 
+
+        <main>
+            <div>
+                <img class="video_thumbnail_here">
+                <h5 class="title_here">Title</h5>
+                <h4 description>Description</h4>
+                <ul class="Comments_here">
+                    <li>Comment 1</li>
+                    <li>Comment 2</li>
+                    <li>Comment 3</li>
+                </ul>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+        </main>
+
+        <footer>
+            <div class="footer_links">
+                <a href="#">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="contact-us.html">Contact Us</a>
+            </div>
+            <div class="footer_info">
+                <h3>Business Information:</h5>
+                <p>Email: <a href="mailto:Reviewsy_support@bogus.com">Reviewsy_support@bogus.com</a></p>
+                <p>Phone Number: <a title="Number" href="tel:+9715523729">05523729</a></p>
+            </div>
+    <!--
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28885.77412863348!2d55.23485251083986!3d25.178871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6834c73541e9%3A0x7cd1b295e179fce7!2sDAMAC%20Park%20Central!5e0!3m2!1sen!2sae!4v1758644266338!5m2!1sen!2sae" width="600" height="450" style="border:0;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        -->
+            <div class="copyright">
+                <p>Reviewsy &copy; 2025</p>
+                <p>All Rights Reserved ONLY FOR AFRAZ (NO COPYING).</p>
+            </div>
+
+            </footer>
+    </body>
+    <script>
+    const sidebar = document.getElementById("sideBar");
+    const toggleBtn = document.getElementById("sideBar_toggle");
+    const toggleIcon = toggleBtn.querySelector(".material-symbols-outlined");
+
+    toggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+
+        // Toggle between menu and close icon
+        const isOpen = sidebar.classList.contains("open");
+        toggleIcon.textContent = isOpen ? "close" : "menu";
+    });
+
+    // Auto-open if screen is wide enough
+    function checkWidth() {
+        if (window.innerWidth >= 1200) {
+        sidebar.classList.add("open");
+        toggleIcon.textContent = "close";
+        } else {
+        sidebar.classList.remove("open");
+        toggleIcon.textContent = "menu";
+        }
+    }
+
+    window.addEventListener("resize", checkWidth);
+    checkWidth(); // Run on page load
+    </script>
 </html>
