@@ -62,9 +62,6 @@
             </nav>
         </aside>
 
-
-
-
         <main>
             <div>
                 <img class="video_thumbnail_here">
@@ -76,15 +73,15 @@
                     <li>Comment 3</li>
                 </ul>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            <p>PALCEHOLDER TEXT</p>
+            <p>PALCEHOLDER TEXT</p>
+            <p>PALCEHOLDER TEXT</p>
+            <p>PALCEHOLDER TEXT</p>
+            <p>PALCEHOLDER TEXT</p>
+            <p>PALCEHOLDER TEXT</p>
+            <p>PALCEHOLDER TEXT</p>
             
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum quae. Error assumenda dolorem dolor? Iusto, libero. Iure deserunt esse nemo minima cupiditate, aperiam ipsa officia quasi! Eaque, architecto consectetur.</p>
+            <p>PALCEHOLDER TEXT</p>
         </main>
 
         <footer>
@@ -110,30 +107,30 @@
             </footer>
     </body>
     <script>
-    const sidebar = document.getElementById("sideBar");
-    const toggleBtn = document.getElementById("sideBar_toggle");
-    const toggleIcon = toggleBtn.querySelector(".material-symbols-outlined");
+        document.addEventListener("DOMContentLoaded", () => {
+        const sidebar = document.getElementById("sideBar");
+        const toggleBtn = document.getElementById("sideBar_toggle");
+        const toggleIcon = toggleBtn.querySelector(".material-symbols-outlined");
 
-    toggleBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            const isOpen = sidebar.classList.contains("open");
+            toggleIcon.textContent = isOpen ? "close" : "menu";
+        });
 
-        // Toggle between menu and close icon
-        const isOpen = sidebar.classList.contains("open");
-        toggleIcon.textContent = isOpen ? "close" : "menu";
-    });
-
-    // Auto-open if screen is wide enough
-    function checkWidth() {
-        if (window.innerWidth >= 1200) {
-        sidebar.classList.add("open");
-        toggleIcon.textContent = "close";
-        } else {
-        sidebar.classList.remove("open");
-        toggleIcon.textContent = "menu";
+        function checkWidth() {
+            if (window.innerWidth >= 1920) {
+            sidebar.classList.add("open");
+            toggleIcon.textContent = "close";
+            } else {
+            sidebar.classList.remove("open");
+            toggleIcon.textContent = "menu";
+            }
         }
-    }
 
-    window.addEventListener("resize", checkWidth);
-    checkWidth(); // Run on page load
+        window.addEventListener("resize", checkWidth);
+        checkWidth();
+        });
     </script>
+
 </html>

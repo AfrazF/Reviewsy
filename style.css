@@ -391,8 +391,10 @@ footer .copyright {
 
 /* ===== SIDEBAR STYLES ===== */
 .sideBar {
+  grid-area: aside;
   position: sticky;
-  top: 0;
+  top: 50px;
+  height: calc(100vh - 50px);
   left: 0;
   height: 100vh;
   width: 70px;
